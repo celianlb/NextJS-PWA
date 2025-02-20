@@ -1,12 +1,13 @@
-import type React from "react"
-import type { Metadata, Viewport } from "next"
-import ClientLayout from "./client-layout"
-import "./globals.css"
+import type { Metadata, Viewport } from "next";
+import type React from "react";
+import ClientLayout from "./client-layout";
+import "./globals.css";
 
-const APP_NAME = "PWA App"
-const APP_DEFAULT_TITLE = "My Awesome PWA App"
-const APP_TITLE_TEMPLATE = "%s - PWA App"
-const APP_DESCRIPTION = "Best PWA app in the world!"
+const APP_NAME = "My PWA NextJS";
+const APP_DEFAULT_TITLE = "My Awesome PWA App";
+const APP_TITLE_TEMPLATE = "PWA App";
+const APP_DESCRIPTION =
+  "That an example of PWA application provide from NextJS 15";
 
 export const metadata: Metadata = {
   applicationName: APP_NAME,
@@ -42,21 +43,20 @@ export const metadata: Metadata = {
     },
     description: APP_DESCRIPTION,
   },
-}
+};
 
 export const viewport: Viewport = {
   themeColor: "#FFFFFF",
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <ClientLayout>{children}</ClientLayout>
     </html>
-  )
+  );
 }
-
